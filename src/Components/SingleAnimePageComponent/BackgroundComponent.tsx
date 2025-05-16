@@ -3,8 +3,10 @@ import { Divider, Stack, Typography } from '@mui/material';
 export const BackgroundComponent = ({ background }: { background: string }) => {
   return (
     <Stack
+      spacing={2}
       sx={{
-        padding: { xs: '16px', sm: '24px' },
+        padding: { sm: '24px' },
+        width: { xs: '100%', lg: '100%' },
         margin: '0 auto',
       }}
     >
