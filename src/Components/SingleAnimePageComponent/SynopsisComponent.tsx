@@ -4,7 +4,6 @@ const SynopsisComponent = ({ synopsis }: { synopsis: string }) => {
   return (
     <Stack
       sx={{
-        padding: { xs: '16px', sm: '24px' },
         margin: '0 auto',
       }}
     >

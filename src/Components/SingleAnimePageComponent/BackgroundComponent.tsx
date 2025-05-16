@@ -5,7 +5,6 @@ export const BackgroundComponent = ({ background }: { background: string }) => {
     <Stack
       spacing={2}
       sx={{
-        padding: { sm: '24px' },
         width: { xs: '100%', lg: '100%' },
         margin: '0 auto',
       }}
