@@ -6,11 +6,7 @@ export const MainInfo = ({ props }: { props: AnimeDatatype }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
       <Typography fontWeight={'bold'}>{props.title}</Typography>
-      <img
-        src={props.images.webp.image_url}
-        alt={props.title}
-        width={300}
-      />{' '}
+      <img src={props.images.webp.image_url} alt={props.title} width={200} />
       <Divider />
       <div>
         <Typography variant="h6">Alternative Titles</Typography>
