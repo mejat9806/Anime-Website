@@ -1,10 +1,16 @@
-import { Divider, Typography } from '@mui/material';
+import { Divider, Stack, Typography } from '@mui/material';
 import type { AnimeDatatype } from '../../@types/animeType';
 import { capitalizeFirstLetter } from '../../@utils/utils';
 
 export const MainInfo = ({ props }: { props: AnimeDatatype }) => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    <Stack
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '12px',
+      }}
+    >
       <Typography fontWeight={'bold'}>{props.title}</Typography>
       <img src={props.images.webp.image_url} alt={props.title} width={200} />
       <Divider />
@@ -140,6 +146,6 @@ export const MainInfo = ({ props }: { props: AnimeDatatype }) => {
           <span style={{ fontWeight: 'bold' }}>Members:</span> {props.members}
         </Typography>
       </div>
-    </div>
+    </Stack>
   );
 };

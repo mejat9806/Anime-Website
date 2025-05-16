@@ -44,7 +44,7 @@ export const SingleAnimeDetailPage = () => {
         sx={{ display: 'flex', padding: '10px' }}
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
-        <Grid size={3}>
+        <Grid size={{ xs: 12, sm: 3 }}>
           <MainInfo props={animeDetail.data} />
         </Grid>
         <Grid>
