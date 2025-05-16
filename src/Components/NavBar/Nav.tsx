@@ -6,6 +6,7 @@ import {
   Button,
   TextField,
   InputAdornment,
+  Stack,
 } from '@mui/material';
 import SavedSearchIcon from '@mui/icons-material/SavedSearch';
 import { useState, useRef, useEffect } from 'react';
@@ -102,9 +103,15 @@ const Nav = () => {
                   </div>
                 )}
               {isFetching && (
-                <div>
-                  <p style={{ color: 'black' }}>loading</p>
-                </div>
+                <Stack
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  <Typography style={{ color: 'black' }}>loading</Typography>
+                </Stack>
               )}
               {!isFetching &&
                 animeName &&
