@@ -12,6 +12,7 @@ const PagePagination = ({ totalPages }: PaginationProps) => {
   return (
     <Stack spacing={2}>
       <Pagination
+        defaultPage={1}
         count={totalPages}
         onChange={handleChange}
         page={Math.min(currentPage, totalPages ?? 1)}
