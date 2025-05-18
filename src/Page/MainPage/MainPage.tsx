@@ -10,9 +10,9 @@ const MainPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const page = searchParams.get('page') || '1';
   const search = searchParams.get('search') || '';
-  const debouncedInputValue = useDebounce({ page, search, delay: 250 });
+  const debouncedInputValue = useDebounce({ search, delay: 250 });
   const { data: animeLists, isLoading: isloadingAllAnimeData } =
-    useGetAllAnimeList(debouncedInputValue);
+    useGetAllAnimeList({ search: debouncedInputValue, page });
   const totalPage = animeLists?.pagination.last_visible_page;
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newSearch = e.target.value;
